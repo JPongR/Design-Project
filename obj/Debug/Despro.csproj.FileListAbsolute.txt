@@ -1,0 +1,9 @@
+C:\Users\jp19r\source\repos\Despro\bin\Debug\Despro.exe.config
+C:\Users\jp19r\source\repos\Despro\bin\Debug\Despro.exe
+C:\Users\jp19r\source\repos\Despro\bin\Debug\Despro.pdb
+C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.csprojAssemblyReference.cache
+C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.Form1.resources
+C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.Properties.Resources.resources
+C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.csproj.GenerateResource.cache
+C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.exe
+C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.pdb
