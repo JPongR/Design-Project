@@ -7,3 +7,15 @@ C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.Properties.Resources.resourc
 C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.csproj.GenerateResource.cache
 C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.exe
 C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.pdb
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.csprojAssemblyReference.cache
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.login.resources
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.mainMenu.resources
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.Properties.Resources.resources
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.csproj.GenerateResource.cache
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.exe
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.pdb
+C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\desproDatabase.mdf
+C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\desproDatabase_log.ldf
+C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.exe.config
+C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.exe
+C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.pdb
