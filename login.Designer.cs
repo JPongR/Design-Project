@@ -35,7 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.forgetPassword = new System.Windows.Forms.Label();
-            this.loginButton = new System.Windows.Forms.Button();
+            this.SignInBtn = new System.Windows.Forms.Button();
+            this.WrongLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // desproTitle
@@ -65,6 +66,8 @@
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(246, 20);
             this.usernameBox.TabIndex = 2;
+            this.usernameBox.Click += new System.EventHandler(this.usernameBox_Click);
+            this.usernameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UsernameBox_KeyDown);
             // 
             // passwordBox
             // 
@@ -73,6 +76,7 @@
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(246, 20);
             this.passwordBox.TabIndex = 3;
+            this.passwordBox.Click += new System.EventHandler(this.passwordBox_Click);
             // 
             // label1
             // 
@@ -104,22 +108,33 @@
             this.forgetPassword.TabIndex = 6;
             this.forgetPassword.Text = "Forget Password";
             // 
-            // loginButton
+            // SignInBtn
             // 
-            this.loginButton.Location = new System.Drawing.Point(119, 393);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(75, 23);
-            this.loginButton.TabIndex = 7;
-            this.loginButton.Text = "LOGIN";
-            this.loginButton.UseVisualStyleBackColor = true;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.SignInBtn.Location = new System.Drawing.Point(119, 393);
+            this.SignInBtn.Name = "SignInBtn";
+            this.SignInBtn.Size = new System.Drawing.Size(75, 23);
+            this.SignInBtn.TabIndex = 7;
+            this.SignInBtn.Text = "LOGIN";
+            this.SignInBtn.UseVisualStyleBackColor = true;
+            this.SignInBtn.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // WrongLabel
+            // 
+            this.WrongLabel.AutoSize = true;
+            this.WrongLabel.ForeColor = System.Drawing.Color.Red;
+            this.WrongLabel.Location = new System.Drawing.Point(115, 428);
+            this.WrongLabel.Name = "WrongLabel";
+            this.WrongLabel.Size = new System.Drawing.Size(94, 13);
+            this.WrongLabel.TabIndex = 8;
+            this.WrongLabel.Text = "Wrong Credentials";
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 450);
-            this.Controls.Add(this.loginButton);
+            this.Controls.Add(this.WrongLabel);
+            this.Controls.Add(this.SignInBtn);
             this.Controls.Add(this.forgetPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -143,7 +158,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label forgetPassword;
-        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button SignInBtn;
+        private System.Windows.Forms.Label WrongLabel;
     }
 }
 

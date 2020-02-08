@@ -12,7 +12,7 @@ namespace Despro
 {
     public partial class mainMenu : Form
     {
-        public mainMenu()
+        public mainMenu(string user, string type)
         {
             InitializeComponent();
         }
