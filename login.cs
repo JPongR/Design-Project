@@ -35,7 +35,7 @@ namespace Despro
                 /* in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. */
                 DataTable dt1 = new DataTable(); //this is creating a virtual table  
                 sda1.Fill(dt1);
-                mainMenu mainMenu = new mainMenu(dt1.Rows[0][1].ToString(), dt1.Rows[0][2].ToString());
+                mainMenuSelect mainMenu = new mainMenuSelect(dt1.Rows[0][1].ToString(), dt1.Rows[0][2].ToString());
                 Hide();
                 mainMenu.Show();
             }

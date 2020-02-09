@@ -9,7 +9,6 @@ C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.exe
 C:\Users\jp19r\source\repos\Despro\obj\Debug\Despro.pdb
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.csprojAssemblyReference.cache
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.login.resources
-C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.mainMenu.resources
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.Properties.Resources.resources
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.csproj.GenerateResource.cache
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.exe
@@ -19,3 +18,5 @@ C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\desproDatabase_log.l
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.exe.config
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.exe
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.pdb
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.mainMenu1.resources
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.mainMenuSelect.resources

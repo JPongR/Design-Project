@@ -66,6 +66,7 @@
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(246, 20);
             this.usernameBox.TabIndex = 2;
+            this.usernameBox.Text = "user";
             this.usernameBox.Click += new System.EventHandler(this.usernameBox_Click);
             this.usernameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UsernameBox_KeyDown);
             // 
@@ -74,8 +75,10 @@
             this.passwordBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.passwordBox.Location = new System.Drawing.Point(46, 341);
             this.passwordBox.Name = "passwordBox";
+            this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(246, 20);
             this.passwordBox.TabIndex = 3;
+            this.passwordBox.Text = "pass";
             this.passwordBox.Click += new System.EventHandler(this.passwordBox_Click);
             // 
             // label1

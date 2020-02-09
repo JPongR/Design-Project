@@ -66,11 +66,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>desproDatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="mainMenu.cs">
+    <Compile Include="mainMenuSelect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mainMenu.Designer.cs">
-      <DependentUpon>mainMenu.cs</DependentUpon>
+    <Compile Include="mainMenuSelect.Designer.cs">
+      <DependentUpon>mainMenuSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainMenu1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainMenu1.Designer.cs">
+      <DependentUpon>mainMenu1.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -83,8 +89,11 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mainMenu.resx">
-      <DependentUpon>mainMenu.cs</DependentUpon>
+    <EmbeddedResource Include="mainMenu1.resx">
+      <DependentUpon>mainMenu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainMenuSelect.resx">
+      <DependentUpon>mainMenuSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
