@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.studentButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.deviceButton = new System.Windows.Forms.Button();
+            this.accountButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,11 +43,11 @@
             // studentButton
             // 
             this.studentButton.AutoSize = true;
-            this.studentButton.BackColor = System.Drawing.Color.LightCyan;
+            this.studentButton.BackColor = System.Drawing.Color.IndianRed;
             this.studentButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.studentButton.Enabled = false;
             this.studentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studentButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentButton.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentButton.ForeColor = System.Drawing.Color.Black;
             this.studentButton.Location = new System.Drawing.Point(0, 0);
             this.studentButton.Name = "studentButton";
@@ -56,53 +56,53 @@
             this.studentButton.Text = "Student Database";
             this.studentButton.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // loginButton
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.LightCyan;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Enabled = false;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(0, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(877, 100);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Login Database";
-            this.button1.UseVisualStyleBackColor = false;
+            this.loginButton.AutoSize = true;
+            this.loginButton.BackColor = System.Drawing.Color.IndianRed;
+            this.loginButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.loginButton.Enabled = false;
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButton.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.ForeColor = System.Drawing.Color.Black;
+            this.loginButton.Location = new System.Drawing.Point(0, 100);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(877, 100);
+            this.loginButton.TabIndex = 6;
+            this.loginButton.Text = "Login Database";
+            this.loginButton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // deviceButton
             // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.LightCyan;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Enabled = false;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(0, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(877, 100);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Device Database";
-            this.button2.UseVisualStyleBackColor = false;
+            this.deviceButton.AutoSize = true;
+            this.deviceButton.BackColor = System.Drawing.Color.IndianRed;
+            this.deviceButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deviceButton.Enabled = false;
+            this.deviceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deviceButton.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deviceButton.ForeColor = System.Drawing.Color.Black;
+            this.deviceButton.Location = new System.Drawing.Point(0, 200);
+            this.deviceButton.Name = "deviceButton";
+            this.deviceButton.Size = new System.Drawing.Size(877, 100);
+            this.deviceButton.TabIndex = 7;
+            this.deviceButton.Text = "Device Database";
+            this.deviceButton.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // accountButton
             // 
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.LightCyan;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.Enabled = false;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(0, 300);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(877, 100);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Accounts";
-            this.button3.UseVisualStyleBackColor = false;
+            this.accountButton.AutoSize = true;
+            this.accountButton.BackColor = System.Drawing.Color.IndianRed;
+            this.accountButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.accountButton.Enabled = false;
+            this.accountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.accountButton.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountButton.ForeColor = System.Drawing.Color.Black;
+            this.accountButton.Location = new System.Drawing.Point(0, 300);
+            this.accountButton.Name = "accountButton";
+            this.accountButton.Size = new System.Drawing.Size(877, 100);
+            this.accountButton.TabIndex = 8;
+            this.accountButton.Text = "Accounts";
+            this.accountButton.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -139,9 +139,9 @@
             // menuPanel
             // 
             this.menuPanel.AutoSize = true;
-            this.menuPanel.Controls.Add(this.button3);
-            this.menuPanel.Controls.Add(this.button2);
-            this.menuPanel.Controls.Add(this.button1);
+            this.menuPanel.Controls.Add(this.accountButton);
+            this.menuPanel.Controls.Add(this.deviceButton);
+            this.menuPanel.Controls.Add(this.loginButton);
             this.menuPanel.Controls.Add(this.studentButton);
             this.menuPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.menuPanel.Location = new System.Drawing.Point(0, 238);
@@ -154,7 +154,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(877, 638);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.label2);
@@ -173,9 +173,9 @@
         #endregion
 
         private System.Windows.Forms.Button studentButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button deviceButton;
+        private System.Windows.Forms.Button accountButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

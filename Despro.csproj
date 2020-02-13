@@ -66,17 +66,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>desproDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="deviceDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deviceDatabase.Designer.cs">
+      <DependentUpon>deviceDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accountsDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accountsDatabase.Designer.cs">
+      <DependentUpon>accountsDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginDatabase.Designer.cs">
+      <DependentUpon>loginDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentDatabase.Designer.cs">
+      <DependentUpon>studentDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainMenuSelect.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mainMenuSelect.Designer.cs">
       <DependentUpon>mainMenuSelect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mainMenu1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mainMenu1.Designer.cs">
-      <DependentUpon>mainMenu1.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -86,11 +104,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="accountsDatabase.resx">
+      <DependentUpon>accountsDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deviceDatabase.resx">
+      <DependentUpon>deviceDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mainMenu1.resx">
-      <DependentUpon>mainMenu1.cs</DependentUpon>
+    <EmbeddedResource Include="loginDatabase.resx">
+      <DependentUpon>loginDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenuSelect.resx">
       <DependentUpon>mainMenuSelect.cs</DependentUpon>
@@ -104,6 +128,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="studentDatabase.resx">
+      <DependentUpon>studentDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="desproDatabaseDataSet.xsc">
       <DependentUpon>desproDatabaseDataSet.xsd</DependentUpon>
     </None>
