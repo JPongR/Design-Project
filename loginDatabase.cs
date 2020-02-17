@@ -12,9 +12,35 @@ namespace Despro
 {
     public partial class loginDatabase : Form
     {
-        public loginDatabase()
+        public loginDatabase(string user, string type)
         {
             InitializeComponent();
+            studentButton.Enabled = false;
+            loginButton.Enabled = false;
+            deviceButton.Enabled = false;
+            accountButton.Enabled = false;
+
+            if (type == "icto")
+            {
+                studentButton.Enabled = true;
+                loginButton.Enabled = true;
+                deviceButton.Enabled = true;
+                accountButton.Enabled = true;
+            }
+            else if (type == "uso")
+            {
+                studentButton.Enabled = false;
+                loginButton.Enabled = true;
+                deviceButton.Enabled = true;
+                accountButton.Enabled = false;
+            }
+            else
+            {
+                studentButton.Enabled = false;
+                loginButton.Enabled = true;
+                deviceButton.Enabled = false;
+                accountButton.Enabled = false;
+            }
         }
     }
 }

@@ -15,7 +15,6 @@ namespace Despro
         public studentDatabase(string user, string type)
         {
             InitializeComponent();
-            InitializeComponent();
             studentButton.Enabled = false;
             loginButton.Enabled = false;
             deviceButton.Enabled = false;

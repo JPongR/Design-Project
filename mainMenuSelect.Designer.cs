@@ -55,6 +55,7 @@
             this.studentButton.TabIndex = 5;
             this.studentButton.Text = "Student Database";
             this.studentButton.UseVisualStyleBackColor = false;
+            this.studentButton.Click += new System.EventHandler(this.studentButton_Click);
             // 
             // loginButton
             // 
@@ -71,6 +72,7 @@
             this.loginButton.TabIndex = 6;
             this.loginButton.Text = "Login Database";
             this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // deviceButton
             // 
@@ -87,6 +89,7 @@
             this.deviceButton.TabIndex = 7;
             this.deviceButton.Text = "Device Database";
             this.deviceButton.UseVisualStyleBackColor = false;
+            this.deviceButton.Click += new System.EventHandler(this.deviceButton_Click);
             // 
             // accountButton
             // 
@@ -103,6 +106,7 @@
             this.accountButton.TabIndex = 8;
             this.accountButton.Text = "Accounts";
             this.accountButton.UseVisualStyleBackColor = false;
+            this.accountButton.Click += new System.EventHandler(this.accountButton_Click);
             // 
             // pictureBox1
             // 

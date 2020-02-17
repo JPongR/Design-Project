@@ -18,5 +18,8 @@ C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\desproDatabase_log.l
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.exe.config
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.exe
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.pdb
-C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.mainMenu1.resources
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.mainMenuSelect.resources
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.accountsDatabase.resources
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.deviceDatabase.resources
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.loginDatabase.resources
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.studentDatabase.resources
