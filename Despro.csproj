@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -65,6 +65,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>desproDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="desproDatabaseDataSetAdmin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>desproDatabaseDataSetAdmin.xsd</DependentUpon>
     </Compile>
     <Compile Include="deviceDatabase.cs">
       <SubType>Form</SubType>
@@ -142,6 +147,17 @@
     <None Include="desproDatabaseDataSet.xss">
       <DependentUpon>desproDatabaseDataSet.xsd</DependentUpon>
     </None>
+    <None Include="desproDatabaseDataSetAdmin.xsc">
+      <DependentUpon>desproDatabaseDataSetAdmin.xsd</DependentUpon>
+    </None>
+    <None Include="desproDatabaseDataSetAdmin.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>desproDatabaseDataSetAdmin.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="desproDatabaseDataSetAdmin.xss">
+      <DependentUpon>desproDatabaseDataSetAdmin.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -166,6 +182,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="desproDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="desproDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>desproDatabase.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
