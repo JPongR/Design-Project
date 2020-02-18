@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -37,13 +38,26 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.studentButton = new System.Windows.Forms.Button();
             this.bodyPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.desproDatabaseDataSetAdminBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.desproDatabaseDataSetAdmin = new Despro.desproDatabaseDataSetAdmin();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.adminTableAdapter = new Despro.desproDatabaseDataSetAdminTableAdapters.adminTableAdapter();
             this.titlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuPanel.SuspendLayout();
             this.bodyPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdminBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // titlePanel
@@ -93,6 +107,7 @@
             // 
             this.accountButton.BackColor = System.Drawing.Color.IndianRed;
             this.accountButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.accountButton.Enabled = false;
             this.accountButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountButton.Location = new System.Drawing.Point(0, 300);
             this.accountButton.Name = "accountButton";
@@ -100,11 +115,13 @@
             this.accountButton.TabIndex = 3;
             this.accountButton.Text = "Accounts";
             this.accountButton.UseVisualStyleBackColor = false;
+            this.accountButton.Click += new System.EventHandler(this.accountButton_Click);
             // 
             // deviceButton
             // 
             this.deviceButton.BackColor = System.Drawing.Color.IndianRed;
             this.deviceButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deviceButton.Enabled = false;
             this.deviceButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deviceButton.Location = new System.Drawing.Point(0, 200);
             this.deviceButton.Name = "deviceButton";
@@ -112,11 +129,13 @@
             this.deviceButton.TabIndex = 2;
             this.deviceButton.Text = "Device Database";
             this.deviceButton.UseVisualStyleBackColor = false;
+            this.deviceButton.Click += new System.EventHandler(this.deviceButton_Click);
             // 
             // loginButton
             // 
             this.loginButton.BackColor = System.Drawing.Color.IndianRed;
             this.loginButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.loginButton.Enabled = false;
             this.loginButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.Location = new System.Drawing.Point(0, 100);
             this.loginButton.Name = "loginButton";
@@ -124,11 +143,13 @@
             this.loginButton.TabIndex = 1;
             this.loginButton.Text = "Login Database";
             this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // studentButton
             // 
             this.studentButton.BackColor = System.Drawing.Color.IndianRed;
             this.studentButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.studentButton.Enabled = false;
             this.studentButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentButton.Location = new System.Drawing.Point(0, 0);
             this.studentButton.Name = "studentButton";
@@ -136,16 +157,86 @@
             this.studentButton.TabIndex = 0;
             this.studentButton.Text = "Student Database";
             this.studentButton.UseVisualStyleBackColor = false;
+            this.studentButton.Click += new System.EventHandler(this.studentButton_Click);
             // 
             // bodyPanel
             // 
+            this.bodyPanel.Controls.Add(this.panel2);
             this.bodyPanel.Controls.Add(this.panel1);
-            this.bodyPanel.Controls.Add(this.dataGridView1);
             this.bodyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bodyPanel.Location = new System.Drawing.Point(182, 51);
             this.bodyPanel.Name = "bodyPanel";
             this.bodyPanel.Size = new System.Drawing.Size(618, 399);
             this.bodyPanel.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(618, 299);
+            this.panel2.TabIndex = 2;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.passDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.adminBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(618, 299);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passDataGridViewTextBoxColumn
+            // 
+            this.passDataGridViewTextBoxColumn.DataPropertyName = "pass";
+            this.passDataGridViewTextBoxColumn.HeaderText = "pass";
+            this.passDataGridViewTextBoxColumn.Name = "passDataGridViewTextBoxColumn";
+            this.passDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adminBindingSource
+            // 
+            this.adminBindingSource.DataMember = "admin";
+            this.adminBindingSource.DataSource = this.desproDatabaseDataSetAdminBindingSource;
+            // 
+            // desproDatabaseDataSetAdminBindingSource
+            // 
+            this.desproDatabaseDataSetAdminBindingSource.DataSource = this.desproDatabaseDataSetAdmin;
+            this.desproDatabaseDataSetAdminBindingSource.Position = 0;
+            // 
+            // desproDatabaseDataSetAdmin
+            // 
+            this.desproDatabaseDataSetAdmin.DataSetName = "desproDatabaseDataSetAdmin";
+            this.desproDatabaseDataSetAdmin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -155,14 +246,9 @@
             this.panel1.Size = new System.Drawing.Size(618, 100);
             this.panel1.TabIndex = 1;
             // 
-            // dataGridView1
+            // adminTableAdapter
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(618, 399);
-            this.dataGridView1.TabIndex = 0;
+            this.adminTableAdapter.ClearBeforeFill = true;
             // 
             // accountsDatabase
             // 
@@ -174,12 +260,17 @@
             this.Controls.Add(this.titlePanel);
             this.Name = "accountsDatabase";
             this.Text = "Accounts";
+            this.Load += new System.EventHandler(this.accountsDatabase_Load);
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuPanel.ResumeLayout(false);
             this.bodyPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdminBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdmin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +288,14 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.BindingSource desproDatabaseDataSetAdminBindingSource;
+        private desproDatabaseDataSetAdmin desproDatabaseDataSetAdmin;
+        private System.Windows.Forms.BindingSource adminBindingSource;
+        private desproDatabaseDataSetAdminTableAdapters.adminTableAdapter adminTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
     }
 }

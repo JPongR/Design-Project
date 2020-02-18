@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,12 +39,22 @@
             this.studentButton = new System.Windows.Forms.Button();
             this.bodyPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.desproDatabaseDataSetDevices = new Despro.desproDatabaseDataSetDevices();
+            this.deviceAithorizationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.deviceAithorizationTableAdapter = new Despro.desproDatabaseDataSetDevicesTableAdapters.deviceAithorizationTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deviceNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allowedUsersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuPanel.SuspendLayout();
             this.bodyPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetDevices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deviceAithorizationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // titlePanel
@@ -93,6 +104,7 @@
             // 
             this.accountButton.BackColor = System.Drawing.Color.IndianRed;
             this.accountButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.accountButton.Enabled = false;
             this.accountButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountButton.Location = new System.Drawing.Point(0, 300);
             this.accountButton.Name = "accountButton";
@@ -100,11 +112,13 @@
             this.accountButton.TabIndex = 3;
             this.accountButton.Text = "Accounts";
             this.accountButton.UseVisualStyleBackColor = false;
+            this.accountButton.Click += new System.EventHandler(this.accountButton_Click);
             // 
             // deviceButton
             // 
             this.deviceButton.BackColor = System.Drawing.Color.IndianRed;
             this.deviceButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deviceButton.Enabled = false;
             this.deviceButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deviceButton.Location = new System.Drawing.Point(0, 200);
             this.deviceButton.Name = "deviceButton";
@@ -112,11 +126,13 @@
             this.deviceButton.TabIndex = 2;
             this.deviceButton.Text = "Device Database";
             this.deviceButton.UseVisualStyleBackColor = false;
+            this.deviceButton.Click += new System.EventHandler(this.deviceButton_Click);
             // 
             // loginButton
             // 
             this.loginButton.BackColor = System.Drawing.Color.IndianRed;
             this.loginButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.loginButton.Enabled = false;
             this.loginButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.Location = new System.Drawing.Point(0, 100);
             this.loginButton.Name = "loginButton";
@@ -124,11 +140,13 @@
             this.loginButton.TabIndex = 1;
             this.loginButton.Text = "Login Database";
             this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // studentButton
             // 
             this.studentButton.BackColor = System.Drawing.Color.IndianRed;
             this.studentButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.studentButton.Enabled = false;
             this.studentButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentButton.Location = new System.Drawing.Point(0, 0);
             this.studentButton.Name = "studentButton";
@@ -136,11 +154,12 @@
             this.studentButton.TabIndex = 0;
             this.studentButton.Text = "Student Database";
             this.studentButton.UseVisualStyleBackColor = false;
+            this.studentButton.Click += new System.EventHandler(this.studentButton_Click);
             // 
             // bodyPanel
             // 
+            this.bodyPanel.Controls.Add(this.panel2);
             this.bodyPanel.Controls.Add(this.panel1);
-            this.bodyPanel.Controls.Add(this.dataGridView1);
             this.bodyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bodyPanel.Location = new System.Drawing.Point(182, 51);
             this.bodyPanel.Name = "bodyPanel";
@@ -155,14 +174,67 @@
             this.panel1.Size = new System.Drawing.Size(618, 100);
             this.panel1.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(618, 299);
+            this.panel2.TabIndex = 2;
+            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.deviceNameDataGridViewTextBoxColumn,
+            this.allowedUsersDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.deviceAithorizationBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(618, 399);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(618, 299);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // desproDatabaseDataSetDevices
+            // 
+            this.desproDatabaseDataSetDevices.DataSetName = "desproDatabaseDataSetDevices";
+            this.desproDatabaseDataSetDevices.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // deviceAithorizationBindingSource
+            // 
+            this.deviceAithorizationBindingSource.DataMember = "deviceAithorization";
+            this.deviceAithorizationBindingSource.DataSource = this.desproDatabaseDataSetDevices;
+            // 
+            // deviceAithorizationTableAdapter
+            // 
+            this.deviceAithorizationTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deviceNameDataGridViewTextBoxColumn
+            // 
+            this.deviceNameDataGridViewTextBoxColumn.DataPropertyName = "deviceName";
+            this.deviceNameDataGridViewTextBoxColumn.HeaderText = "deviceName";
+            this.deviceNameDataGridViewTextBoxColumn.Name = "deviceNameDataGridViewTextBoxColumn";
+            this.deviceNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // allowedUsersDataGridViewTextBoxColumn
+            // 
+            this.allowedUsersDataGridViewTextBoxColumn.DataPropertyName = "allowedUsers";
+            this.allowedUsersDataGridViewTextBoxColumn.HeaderText = "allowedUsers";
+            this.allowedUsersDataGridViewTextBoxColumn.Name = "allowedUsersDataGridViewTextBoxColumn";
+            this.allowedUsersDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // deviceDatabase
             // 
@@ -174,12 +246,16 @@
             this.Controls.Add(this.titlePanel);
             this.Name = "deviceDatabase";
             this.Text = "Device Database";
+            this.Load += new System.EventHandler(this.deviceDatabase_Load);
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuPanel.ResumeLayout(false);
             this.bodyPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetDevices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deviceAithorizationBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,7 +271,14 @@
         private System.Windows.Forms.Button accountButton;
         private System.Windows.Forms.Button deviceButton;
         private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private desproDatabaseDataSetDevices desproDatabaseDataSetDevices;
+        private System.Windows.Forms.BindingSource deviceAithorizationBindingSource;
+        private desproDatabaseDataSetDevicesTableAdapters.deviceAithorizationTableAdapter deviceAithorizationTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deviceNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn allowedUsersDataGridViewTextBoxColumn;
     }
 }

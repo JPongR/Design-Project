@@ -38,11 +38,8 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.studentButton = new System.Windows.Forms.Button();
             this.bodyPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.desproDatabaseDataSet1 = new Despro.desproDatabaseDataSet1();
-            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentsTableAdapter = new Despro.desproDatabaseDataSet1TableAdapters.studentsTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,15 +47,18 @@
             this.studentNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastEntryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastExitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.desproDatabaseDataSet1 = new Despro.desproDatabaseDataSet1();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.studentsTableAdapter = new Despro.desproDatabaseDataSet1TableAdapters.studentsTableAdapter();
             this.titlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuPanel.SuspendLayout();
             this.bodyPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // titlePanel
@@ -170,13 +170,14 @@
             this.bodyPanel.Size = new System.Drawing.Size(618, 399);
             this.bodyPanel.TabIndex = 2;
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(618, 100);
-            this.panel1.TabIndex = 1;
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(618, 299);
+            this.panel2.TabIndex = 2;
             // 
             // dataGridView1
             // 
@@ -194,73 +195,80 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(618, 299);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // desproDatabaseDataSet1
-            // 
-            this.desproDatabaseDataSet1.DataSetName = "desproDatabaseDataSet1";
-            this.desproDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentsBindingSource
-            // 
-            this.studentsBindingSource.DataMember = "students";
-            this.studentsBindingSource.DataSource = this.desproDatabaseDataSet1;
-            // 
-            // studentsTableAdapter
-            // 
-            this.studentsTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
             this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
             this.lastNameDataGridViewTextBoxColumn.HeaderText = "lastName";
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "firstName";
             this.firstNameDataGridViewTextBoxColumn.HeaderText = "firstName";
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // middleNameDataGridViewTextBoxColumn
             // 
             this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "middleName";
             this.middleNameDataGridViewTextBoxColumn.HeaderText = "middleName";
             this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
+            this.middleNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // studentNumberDataGridViewTextBoxColumn
             // 
             this.studentNumberDataGridViewTextBoxColumn.DataPropertyName = "studentNumber";
             this.studentNumberDataGridViewTextBoxColumn.HeaderText = "studentNumber";
             this.studentNumberDataGridViewTextBoxColumn.Name = "studentNumberDataGridViewTextBoxColumn";
+            this.studentNumberDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lastEntryDataGridViewTextBoxColumn
             // 
             this.lastEntryDataGridViewTextBoxColumn.DataPropertyName = "lastEntry";
             this.lastEntryDataGridViewTextBoxColumn.HeaderText = "lastEntry";
             this.lastEntryDataGridViewTextBoxColumn.Name = "lastEntryDataGridViewTextBoxColumn";
+            this.lastEntryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lastExitDataGridViewTextBoxColumn
             // 
             this.lastExitDataGridViewTextBoxColumn.DataPropertyName = "lastExit";
             this.lastExitDataGridViewTextBoxColumn.HeaderText = "lastExit";
             this.lastExitDataGridViewTextBoxColumn.Name = "lastExitDataGridViewTextBoxColumn";
+            this.lastExitDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // panel2
+            // studentsBindingSource
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(618, 299);
-            this.panel2.TabIndex = 2;
+            this.studentsBindingSource.DataMember = "students";
+            this.studentsBindingSource.DataSource = this.desproDatabaseDataSet1;
+            // 
+            // desproDatabaseDataSet1
+            // 
+            this.desproDatabaseDataSet1.DataSetName = "desproDatabaseDataSet1";
+            this.desproDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(618, 100);
+            this.panel1.TabIndex = 1;
+            // 
+            // studentsTableAdapter
+            // 
+            this.studentsTableAdapter.ClearBeforeFill = true;
             // 
             // studentDatabase
             // 
@@ -278,10 +286,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuPanel.ResumeLayout(false);
             this.bodyPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

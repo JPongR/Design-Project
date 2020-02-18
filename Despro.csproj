@@ -71,10 +71,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>desproDatabaseDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="desproDatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>desproDatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="desproDatabaseDataSetAdmin.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>desproDatabaseDataSetAdmin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="desproDatabaseDataSetDevices.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>desproDatabaseDataSetDevices.xsd</DependentUpon>
     </Compile>
     <Compile Include="deviceDatabase.cs">
       <SubType>Form</SubType>
@@ -163,6 +173,17 @@
     <None Include="desproDatabaseDataSet1.xss">
       <DependentUpon>desproDatabaseDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="desproDatabaseDataSet2.xsc">
+      <DependentUpon>desproDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="desproDatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>desproDatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="desproDatabaseDataSet2.xss">
+      <DependentUpon>desproDatabaseDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="desproDatabaseDataSetAdmin.xsc">
       <DependentUpon>desproDatabaseDataSetAdmin.xsd</DependentUpon>
     </None>
@@ -173,6 +194,17 @@
     </None>
     <None Include="desproDatabaseDataSetAdmin.xss">
       <DependentUpon>desproDatabaseDataSetAdmin.xsd</DependentUpon>
+    </None>
+    <None Include="desproDatabaseDataSetDevices.xsc">
+      <DependentUpon>desproDatabaseDataSetDevices.xsd</DependentUpon>
+    </None>
+    <None Include="desproDatabaseDataSetDevices.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>desproDatabaseDataSetDevices.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="desproDatabaseDataSetDevices.xss">
+      <DependentUpon>desproDatabaseDataSetDevices.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
