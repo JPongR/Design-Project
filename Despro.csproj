@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>desproDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="desproDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>desproDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="desproDatabaseDataSetAdmin.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,6 +151,17 @@
     </None>
     <None Include="desproDatabaseDataSet.xss">
       <DependentUpon>desproDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="desproDatabaseDataSet1.xsc">
+      <DependentUpon>desproDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="desproDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>desproDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="desproDatabaseDataSet1.xss">
+      <DependentUpon>desproDatabaseDataSet1.xsd</DependentUpon>
     </None>
     <None Include="desproDatabaseDataSetAdmin.xsc">
       <DependentUpon>desproDatabaseDataSetAdmin.xsd</DependentUpon>

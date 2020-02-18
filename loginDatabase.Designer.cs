@@ -38,29 +38,29 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.studentButton = new System.Windows.Forms.Button();
             this.bodyPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.desproDatabaseDataSetAdmin = new Despro.desproDatabaseDataSetAdmin();
-            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.adminTableAdapter = new Despro.desproDatabaseDataSetAdminTableAdapters.adminTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.desproDatabaseDataSetAdmin = new Despro.desproDatabaseDataSetAdmin();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.adminTableAdapter = new Despro.desproDatabaseDataSetAdminTableAdapters.adminTableAdapter();
             this.titlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuPanel.SuspendLayout();
             this.bodyPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdmin)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // titlePanel
@@ -110,6 +110,7 @@
             // 
             this.accountButton.BackColor = System.Drawing.Color.IndianRed;
             this.accountButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.accountButton.Enabled = false;
             this.accountButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountButton.Location = new System.Drawing.Point(0, 300);
             this.accountButton.Name = "accountButton";
@@ -123,6 +124,7 @@
             // 
             this.deviceButton.BackColor = System.Drawing.Color.IndianRed;
             this.deviceButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deviceButton.Enabled = false;
             this.deviceButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deviceButton.Location = new System.Drawing.Point(0, 200);
             this.deviceButton.Name = "deviceButton";
@@ -136,6 +138,7 @@
             // 
             this.loginButton.BackColor = System.Drawing.Color.IndianRed;
             this.loginButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.loginButton.Enabled = false;
             this.loginButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.Location = new System.Drawing.Point(0, 100);
             this.loginButton.Name = "loginButton";
@@ -149,6 +152,7 @@
             // 
             this.studentButton.BackColor = System.Drawing.Color.IndianRed;
             this.studentButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.studentButton.Enabled = false;
             this.studentButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentButton.Location = new System.Drawing.Point(0, 0);
             this.studentButton.Name = "studentButton";
@@ -167,54 +171,6 @@
             this.bodyPanel.Name = "bodyPanel";
             this.bodyPanel.Size = new System.Drawing.Size(618, 399);
             this.bodyPanel.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(618, 39);
-            this.panel1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(27, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(144, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(240, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(332, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -241,20 +197,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(618, 360);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // desproDatabaseDataSetAdmin
-            // 
-            this.desproDatabaseDataSetAdmin.DataSetName = "desproDatabaseDataSetAdmin";
-            this.desproDatabaseDataSetAdmin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // adminBindingSource
-            // 
-            this.adminBindingSource.DataMember = "admin";
-            this.adminBindingSource.DataSource = this.desproDatabaseDataSetAdmin;
-            // 
-            // adminTableAdapter
-            // 
-            this.adminTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -284,6 +226,68 @@
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // adminBindingSource
+            // 
+            this.adminBindingSource.DataMember = "admin";
+            this.adminBindingSource.DataSource = this.desproDatabaseDataSetAdmin;
+            // 
+            // desproDatabaseDataSetAdmin
+            // 
+            this.desproDatabaseDataSetAdmin.DataSetName = "desproDatabaseDataSetAdmin";
+            this.desproDatabaseDataSetAdmin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(618, 39);
+            this.panel1.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(332, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(240, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(144, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(27, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // adminTableAdapter
+            // 
+            this.adminTableAdapter.ClearBeforeFill = true;
+            // 
             // loginDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,11 +304,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuPanel.ResumeLayout(false);
             this.bodyPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdmin)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

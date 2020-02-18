@@ -28,22 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.titlePanel = new System.Windows.Forms.Panel();
-            this.menuPanel = new System.Windows.Forms.Panel();
-            this.bodyPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.studentButton = new System.Windows.Forms.Button();
-            this.loginButton = new System.Windows.Forms.Button();
-            this.deviceButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuPanel = new System.Windows.Forms.Panel();
             this.accountButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.deviceButton = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.studentButton = new System.Windows.Forms.Button();
+            this.bodyPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.desproDatabaseDataSet1 = new Despro.desproDatabaseDataSet1();
+            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentsTableAdapter = new Despro.desproDatabaseDataSet1TableAdapters.studentsTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastEntryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastExitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.titlePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuPanel.SuspendLayout();
             this.bodyPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // titlePanel
@@ -55,6 +70,27 @@
             this.titlePanel.Name = "titlePanel";
             this.titlePanel.Size = new System.Drawing.Size(800, 51);
             this.titlePanel.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(143, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(231, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "DESPRO TITLE HERE";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 51);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // menuPanel
             // 
@@ -68,77 +104,11 @@
             this.menuPanel.Size = new System.Drawing.Size(182, 399);
             this.menuPanel.TabIndex = 1;
             // 
-            // bodyPanel
-            // 
-            this.bodyPanel.Controls.Add(this.panel1);
-            this.bodyPanel.Controls.Add(this.dataGridView1);
-            this.bodyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bodyPanel.Location = new System.Drawing.Point(182, 51);
-            this.bodyPanel.Name = "bodyPanel";
-            this.bodyPanel.Size = new System.Drawing.Size(618, 399);
-            this.bodyPanel.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 51);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(143, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "DESPRO TITLE HERE";
-            // 
-            // studentButton
-            // 
-            this.studentButton.BackColor = System.Drawing.Color.IndianRed;
-            this.studentButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.studentButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentButton.Location = new System.Drawing.Point(0, 0);
-            this.studentButton.Name = "studentButton";
-            this.studentButton.Size = new System.Drawing.Size(182, 100);
-            this.studentButton.TabIndex = 0;
-            this.studentButton.Text = "Student Database";
-            this.studentButton.UseVisualStyleBackColor = false;
-            // 
-            // loginButton
-            // 
-            this.loginButton.BackColor = System.Drawing.Color.IndianRed;
-            this.loginButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.loginButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(0, 100);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(182, 100);
-            this.loginButton.TabIndex = 1;
-            this.loginButton.Text = "Login Database";
-            this.loginButton.UseVisualStyleBackColor = false;
-            // 
-            // deviceButton
-            // 
-            this.deviceButton.BackColor = System.Drawing.Color.IndianRed;
-            this.deviceButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.deviceButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deviceButton.Location = new System.Drawing.Point(0, 200);
-            this.deviceButton.Name = "deviceButton";
-            this.deviceButton.Size = new System.Drawing.Size(182, 100);
-            this.deviceButton.TabIndex = 2;
-            this.deviceButton.Text = "Device Database";
-            this.deviceButton.UseVisualStyleBackColor = false;
-            // 
             // accountButton
             // 
             this.accountButton.BackColor = System.Drawing.Color.IndianRed;
             this.accountButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.accountButton.Enabled = false;
             this.accountButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountButton.Location = new System.Drawing.Point(0, 300);
             this.accountButton.Name = "accountButton";
@@ -146,15 +116,59 @@
             this.accountButton.TabIndex = 3;
             this.accountButton.Text = "Accounts";
             this.accountButton.UseVisualStyleBackColor = false;
+            this.accountButton.Click += new System.EventHandler(this.accountButton_Click);
             // 
-            // dataGridView1
+            // deviceButton
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(618, 399);
-            this.dataGridView1.TabIndex = 0;
+            this.deviceButton.BackColor = System.Drawing.Color.IndianRed;
+            this.deviceButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deviceButton.Enabled = false;
+            this.deviceButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deviceButton.Location = new System.Drawing.Point(0, 200);
+            this.deviceButton.Name = "deviceButton";
+            this.deviceButton.Size = new System.Drawing.Size(182, 100);
+            this.deviceButton.TabIndex = 2;
+            this.deviceButton.Text = "Device Database";
+            this.deviceButton.UseVisualStyleBackColor = false;
+            this.deviceButton.Click += new System.EventHandler(this.deviceButton_Click);
+            // 
+            // loginButton
+            // 
+            this.loginButton.BackColor = System.Drawing.Color.IndianRed;
+            this.loginButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.loginButton.Enabled = false;
+            this.loginButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.Location = new System.Drawing.Point(0, 100);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(182, 100);
+            this.loginButton.TabIndex = 1;
+            this.loginButton.Text = "Login Database";
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // studentButton
+            // 
+            this.studentButton.BackColor = System.Drawing.Color.IndianRed;
+            this.studentButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.studentButton.Enabled = false;
+            this.studentButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentButton.Location = new System.Drawing.Point(0, 0);
+            this.studentButton.Name = "studentButton";
+            this.studentButton.Size = new System.Drawing.Size(182, 100);
+            this.studentButton.TabIndex = 0;
+            this.studentButton.Text = "Student Database";
+            this.studentButton.UseVisualStyleBackColor = false;
+            this.studentButton.Click += new System.EventHandler(this.studentButton_Click);
+            // 
+            // bodyPanel
+            // 
+            this.bodyPanel.Controls.Add(this.panel2);
+            this.bodyPanel.Controls.Add(this.panel1);
+            this.bodyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bodyPanel.Location = new System.Drawing.Point(182, 51);
+            this.bodyPanel.Name = "bodyPanel";
+            this.bodyPanel.Size = new System.Drawing.Size(618, 399);
+            this.bodyPanel.TabIndex = 2;
             // 
             // panel1
             // 
@@ -163,6 +177,90 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 100);
             this.panel1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.middleNameDataGridViewTextBoxColumn,
+            this.studentNumberDataGridViewTextBoxColumn,
+            this.lastEntryDataGridViewTextBoxColumn,
+            this.lastExitDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.studentsBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(618, 299);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // desproDatabaseDataSet1
+            // 
+            this.desproDatabaseDataSet1.DataSetName = "desproDatabaseDataSet1";
+            this.desproDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentsBindingSource
+            // 
+            this.studentsBindingSource.DataMember = "students";
+            this.studentsBindingSource.DataSource = this.desproDatabaseDataSet1;
+            // 
+            // studentsTableAdapter
+            // 
+            this.studentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "lastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "firstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "firstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // middleNameDataGridViewTextBoxColumn
+            // 
+            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "middleName";
+            this.middleNameDataGridViewTextBoxColumn.HeaderText = "middleName";
+            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
+            // 
+            // studentNumberDataGridViewTextBoxColumn
+            // 
+            this.studentNumberDataGridViewTextBoxColumn.DataPropertyName = "studentNumber";
+            this.studentNumberDataGridViewTextBoxColumn.HeaderText = "studentNumber";
+            this.studentNumberDataGridViewTextBoxColumn.Name = "studentNumberDataGridViewTextBoxColumn";
+            // 
+            // lastEntryDataGridViewTextBoxColumn
+            // 
+            this.lastEntryDataGridViewTextBoxColumn.DataPropertyName = "lastEntry";
+            this.lastEntryDataGridViewTextBoxColumn.HeaderText = "lastEntry";
+            this.lastEntryDataGridViewTextBoxColumn.Name = "lastEntryDataGridViewTextBoxColumn";
+            // 
+            // lastExitDataGridViewTextBoxColumn
+            // 
+            this.lastExitDataGridViewTextBoxColumn.DataPropertyName = "lastExit";
+            this.lastExitDataGridViewTextBoxColumn.HeaderText = "lastExit";
+            this.lastExitDataGridViewTextBoxColumn.Name = "lastExitDataGridViewTextBoxColumn";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(618, 299);
+            this.panel2.TabIndex = 2;
             // 
             // studentDatabase
             // 
@@ -174,12 +272,16 @@
             this.Controls.Add(this.titlePanel);
             this.Name = "studentDatabase";
             this.Text = "Student Database";
+            this.Load += new System.EventHandler(this.studentDatabase_Load);
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuPanel.ResumeLayout(false);
             this.bodyPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -197,5 +299,16 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
+        private desproDatabaseDataSet1 desproDatabaseDataSet1;
+        private System.Windows.Forms.BindingSource studentsBindingSource;
+        private desproDatabaseDataSet1TableAdapters.studentsTableAdapter studentsTableAdapter;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastEntryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastExitDataGridViewTextBoxColumn;
     }
 }

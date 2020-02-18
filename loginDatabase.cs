@@ -16,6 +16,8 @@ namespace Despro
         public string typelocal = "";
         public loginDatabase(string user, string type)
         {
+            //initialization
+            #region
             InitializeComponent();
             studentButton.Enabled = false;
             loginButton.Enabled = false;
@@ -44,8 +46,11 @@ namespace Despro
                 deviceButton.Enabled = false;
                 accountButton.Enabled = false;
             }
+            #endregion
         }
 
+        //menu clicks
+        #region 
         private void studentButton_Click(object sender, EventArgs e)
         {
             studentDatabase studentDatabase = new studentDatabase(userlocal, typelocal);
@@ -73,7 +78,7 @@ namespace Despro
             Hide();
             accountsDatabase.Show();
         }
-
+        #endregion
         private void loginDatabase_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'desproDatabaseDataSetAdmin.admin' table. You can move, or remove it, as needed.
