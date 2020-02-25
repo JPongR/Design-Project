@@ -40,9 +40,27 @@
             this.bodyPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.loginBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.desproDatabaseDataSet2 = new Despro.desproDatabaseDataSet2();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.desproDatabaseDataSetAdmin = new Despro.desproDatabaseDataSetAdmin();
+            this.adminTableAdapter = new Despro.desproDatabaseDataSetAdminTableAdapters.adminTableAdapter();
+            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loginTableAdapter = new Despro.desproDatabaseDataSet2TableAdapters.loginTableAdapter();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.exportButton = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.editButton = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.addButton = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.givenNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.givenNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,18 +71,6 @@
             this.timeOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.desproDatabaseDataSet2 = new Despro.desproDatabaseDataSet2();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.desproDatabaseDataSetAdmin = new Despro.desproDatabaseDataSetAdmin();
-            this.adminTableAdapter = new Despro.desproDatabaseDataSetAdminTableAdapters.adminTableAdapter();
-            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loginTableAdapter = new Despro.desproDatabaseDataSet2TableAdapters.loginTableAdapter();
             this.titlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuPanel.SuspendLayout();
@@ -77,6 +83,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // titlePanel
@@ -203,8 +215,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.givenNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
+            this.givenNameDataGridViewTextBoxColumn,
             this.middleNameDataGridViewTextBoxColumn,
             this.studentNumberDataGridViewTextBoxColumn,
             this.courseDataGridViewTextBoxColumn,
@@ -223,97 +235,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(618, 360);
             this.dataGridView1.TabIndex = 0;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // givenNameDataGridViewTextBoxColumn
-            // 
-            this.givenNameDataGridViewTextBoxColumn.DataPropertyName = "givenName";
-            this.givenNameDataGridViewTextBoxColumn.HeaderText = "givenName";
-            this.givenNameDataGridViewTextBoxColumn.Name = "givenNameDataGridViewTextBoxColumn";
-            this.givenNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "lastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // middleNameDataGridViewTextBoxColumn
-            // 
-            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "middleName";
-            this.middleNameDataGridViewTextBoxColumn.HeaderText = "middleName";
-            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
-            this.middleNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentNumberDataGridViewTextBoxColumn
-            // 
-            this.studentNumberDataGridViewTextBoxColumn.DataPropertyName = "studentNumber";
-            this.studentNumberDataGridViewTextBoxColumn.HeaderText = "studentNumber";
-            this.studentNumberDataGridViewTextBoxColumn.Name = "studentNumberDataGridViewTextBoxColumn";
-            this.studentNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseDataGridViewTextBoxColumn
-            // 
-            this.courseDataGridViewTextBoxColumn.DataPropertyName = "course";
-            this.courseDataGridViewTextBoxColumn.HeaderText = "course";
-            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
-            this.courseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // collegeDataGridViewTextBoxColumn
-            // 
-            this.collegeDataGridViewTextBoxColumn.DataPropertyName = "college";
-            this.collegeDataGridViewTextBoxColumn.HeaderText = "college";
-            this.collegeDataGridViewTextBoxColumn.Name = "collegeDataGridViewTextBoxColumn";
-            this.collegeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // timeInDataGridViewTextBoxColumn
-            // 
-            this.timeInDataGridViewTextBoxColumn.DataPropertyName = "timeIn";
-            this.timeInDataGridViewTextBoxColumn.HeaderText = "timeIn";
-            this.timeInDataGridViewTextBoxColumn.Name = "timeInDataGridViewTextBoxColumn";
-            this.timeInDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // entranceDataGridViewTextBoxColumn
-            // 
-            this.entranceDataGridViewTextBoxColumn.DataPropertyName = "entrance";
-            this.entranceDataGridViewTextBoxColumn.HeaderText = "entrance";
-            this.entranceDataGridViewTextBoxColumn.Name = "entranceDataGridViewTextBoxColumn";
-            this.entranceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // timeOutDataGridViewTextBoxColumn
-            // 
-            this.timeOutDataGridViewTextBoxColumn.DataPropertyName = "timeOut";
-            this.timeOutDataGridViewTextBoxColumn.HeaderText = "timeOut";
-            this.timeOutDataGridViewTextBoxColumn.Name = "timeOutDataGridViewTextBoxColumn";
-            this.timeOutDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // exitDataGridViewTextBoxColumn
-            // 
-            this.exitDataGridViewTextBoxColumn.DataPropertyName = "exit";
-            this.exitDataGridViewTextBoxColumn.HeaderText = "exit";
-            this.exitDataGridViewTextBoxColumn.Name = "exitDataGridViewTextBoxColumn";
-            this.exitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "location";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            this.locationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // loginBindingSource1
             // 
             this.loginBindingSource1.DataMember = "login";
@@ -326,51 +247,12 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 39);
             this.panel1.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(332, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(240, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(144, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(27, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // adminBindingSource
             // 
@@ -394,6 +276,217 @@
             // loginTableAdapter
             // 
             this.loginTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.panel8);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(618, 40);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(150, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(468, 40);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.exportButton);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(311, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(157, 40);
+            this.panel7.TabIndex = 2;
+            // 
+            // exportButton
+            // 
+            this.exportButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.exportButton.Location = new System.Drawing.Point(0, 0);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(157, 40);
+            this.exportButton.TabIndex = 0;
+            this.exportButton.Text = "EXPORT";
+            this.exportButton.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.deleteButton);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(154, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(157, 40);
+            this.panel6.TabIndex = 1;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.deleteButton.Location = new System.Drawing.Point(0, 0);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(157, 40);
+            this.deleteButton.TabIndex = 0;
+            this.deleteButton.Text = "DELETE";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.editButton);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(154, 40);
+            this.panel5.TabIndex = 0;
+            // 
+            // editButton
+            // 
+            this.editButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editButton.Location = new System.Drawing.Point(0, 0);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(154, 40);
+            this.editButton.TabIndex = 0;
+            this.editButton.Text = "EDIT";
+            this.editButton.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.addButton);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(150, 40);
+            this.panel8.TabIndex = 0;
+            // 
+            // addButton
+            // 
+            this.addButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addButton.Location = new System.Drawing.Point(0, 0);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(150, 40);
+            this.addButton.TabIndex = 0;
+            this.addButton.Text = "ADD";
+            this.addButton.UseVisualStyleBackColor = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastNameDataGridViewTextBoxColumn.Width = 83;
+            // 
+            // givenNameDataGridViewTextBoxColumn
+            // 
+            this.givenNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.givenNameDataGridViewTextBoxColumn.DataPropertyName = "givenName";
+            this.givenNameDataGridViewTextBoxColumn.HeaderText = "First Name";
+            this.givenNameDataGridViewTextBoxColumn.Name = "givenNameDataGridViewTextBoxColumn";
+            this.givenNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.givenNameDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // middleNameDataGridViewTextBoxColumn
+            // 
+            this.middleNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "middleName";
+            this.middleNameDataGridViewTextBoxColumn.HeaderText = "Middle Name";
+            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
+            this.middleNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.middleNameDataGridViewTextBoxColumn.Width = 94;
+            // 
+            // studentNumberDataGridViewTextBoxColumn
+            // 
+            this.studentNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.studentNumberDataGridViewTextBoxColumn.DataPropertyName = "studentNumber";
+            this.studentNumberDataGridViewTextBoxColumn.HeaderText = "Student Number";
+            this.studentNumberDataGridViewTextBoxColumn.Name = "studentNumberDataGridViewTextBoxColumn";
+            this.studentNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseDataGridViewTextBoxColumn
+            // 
+            this.courseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.courseDataGridViewTextBoxColumn.DataPropertyName = "course";
+            this.courseDataGridViewTextBoxColumn.HeaderText = "Course";
+            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
+            this.courseDataGridViewTextBoxColumn.ReadOnly = true;
+            this.courseDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // collegeDataGridViewTextBoxColumn
+            // 
+            this.collegeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.collegeDataGridViewTextBoxColumn.DataPropertyName = "college";
+            this.collegeDataGridViewTextBoxColumn.HeaderText = "College";
+            this.collegeDataGridViewTextBoxColumn.Name = "collegeDataGridViewTextBoxColumn";
+            this.collegeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.collegeDataGridViewTextBoxColumn.Width = 67;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date Recorded";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn.Width = 96;
+            // 
+            // timeInDataGridViewTextBoxColumn
+            // 
+            this.timeInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.timeInDataGridViewTextBoxColumn.DataPropertyName = "timeIn";
+            this.timeInDataGridViewTextBoxColumn.HeaderText = "Time In";
+            this.timeInDataGridViewTextBoxColumn.Name = "timeInDataGridViewTextBoxColumn";
+            this.timeInDataGridViewTextBoxColumn.ReadOnly = true;
+            this.timeInDataGridViewTextBoxColumn.Width = 62;
+            // 
+            // entranceDataGridViewTextBoxColumn
+            // 
+            this.entranceDataGridViewTextBoxColumn.DataPropertyName = "entrance";
+            this.entranceDataGridViewTextBoxColumn.HeaderText = "Entry Point";
+            this.entranceDataGridViewTextBoxColumn.Name = "entranceDataGridViewTextBoxColumn";
+            this.entranceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // timeOutDataGridViewTextBoxColumn
+            // 
+            this.timeOutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.timeOutDataGridViewTextBoxColumn.DataPropertyName = "timeOut";
+            this.timeOutDataGridViewTextBoxColumn.HeaderText = "Time Out";
+            this.timeOutDataGridViewTextBoxColumn.Name = "timeOutDataGridViewTextBoxColumn";
+            this.timeOutDataGridViewTextBoxColumn.ReadOnly = true;
+            this.timeOutDataGridViewTextBoxColumn.Width = 69;
+            // 
+            // exitDataGridViewTextBoxColumn
+            // 
+            this.exitDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.exitDataGridViewTextBoxColumn.DataPropertyName = "exit";
+            this.exitDataGridViewTextBoxColumn.HeaderText = "Exit Point";
+            this.exitDataGridViewTextBoxColumn.Name = "exitDataGridViewTextBoxColumn";
+            this.exitDataGridViewTextBoxColumn.ReadOnly = true;
+            this.exitDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "Bus Exit Point";
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.ReadOnly = true;
+            this.locationDataGridViewTextBoxColumn.Width = 89;
             // 
             // loginDatabase
             // 
@@ -419,6 +512,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -436,10 +535,6 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private desproDatabaseDataSetAdmin desproDatabaseDataSetAdmin;
         private System.Windows.Forms.BindingSource adminBindingSource;
         private desproDatabaseDataSetAdminTableAdapters.adminTableAdapter adminTableAdapter;
@@ -447,9 +542,20 @@
         private System.Windows.Forms.BindingSource loginBindingSource;
         private desproDatabaseDataSet2TableAdapters.loginTableAdapter loginTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource loginBindingSource1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button exportButton;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn givenNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn givenNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn courseDataGridViewTextBoxColumn;
@@ -460,6 +566,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn timeOutDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn exitDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource loginBindingSource1;
     }
 }
