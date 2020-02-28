@@ -39,15 +39,7 @@
             this.studentButton = new System.Windows.Forms.Button();
             this.bodyPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.loginBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.desproDatabaseDataSet2 = new Despro.desproDatabaseDataSet2();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.desproDatabaseDataSetAdmin = new Despro.desproDatabaseDataSetAdmin();
-            this.adminTableAdapter = new Despro.desproDatabaseDataSetAdminTableAdapters.adminTableAdapter();
-            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loginTableAdapter = new Despro.desproDatabaseDataSet2TableAdapters.loginTableAdapter();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -58,37 +50,47 @@
             this.editButton = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.addButton = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.givenNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.collegeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.entranceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.loginBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.desproDataSet = new Despro.DesproDataSet();
+            this.loginBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.loginTableAdapter = new Despro.DesproDataSetTableAdapters.loginTableAdapter();
+            this.tableAdapterManager = new Despro.DesproDataSetTableAdapters.TableAdapterManager();
+            this.loginDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuPanel.SuspendLayout();
             this.bodyPanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSet2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdmin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // titlePanel
@@ -202,48 +204,12 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.loginDataGridView);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 39);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(618, 360);
             this.panel2.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.givenNameDataGridViewTextBoxColumn,
-            this.middleNameDataGridViewTextBoxColumn,
-            this.studentNumberDataGridViewTextBoxColumn,
-            this.courseDataGridViewTextBoxColumn,
-            this.collegeDataGridViewTextBoxColumn,
-            this.dateDataGridViewTextBoxColumn,
-            this.timeInDataGridViewTextBoxColumn,
-            this.entranceDataGridViewTextBoxColumn,
-            this.timeOutDataGridViewTextBoxColumn,
-            this.exitDataGridViewTextBoxColumn,
-            this.locationDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.loginBindingSource1;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 360);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // loginBindingSource1
-            // 
-            this.loginBindingSource1.DataMember = "login";
-            this.loginBindingSource1.DataSource = this.desproDatabaseDataSet2;
-            // 
-            // desproDatabaseDataSet2
-            // 
-            this.desproDatabaseDataSet2.DataSetName = "desproDatabaseDataSet2";
-            this.desproDatabaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -253,29 +219,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 39);
             this.panel1.TabIndex = 1;
-            // 
-            // adminBindingSource
-            // 
-            this.adminBindingSource.DataMember = "admin";
-            this.adminBindingSource.DataSource = this.desproDatabaseDataSetAdmin;
-            // 
-            // desproDatabaseDataSetAdmin
-            // 
-            this.desproDatabaseDataSetAdmin.DataSetName = "desproDatabaseDataSetAdmin";
-            this.desproDatabaseDataSetAdmin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // adminTableAdapter
-            // 
-            this.adminTableAdapter.ClearBeforeFill = true;
-            // 
-            // loginBindingSource
-            // 
-            this.loginBindingSource.DataMember = "login";
-            this.loginBindingSource.DataSource = this.desproDatabaseDataSet2;
-            // 
-            // loginTableAdapter
-            // 
-            this.loginTableAdapter.ClearBeforeFill = true;
             // 
             // panel3
             // 
@@ -374,119 +317,136 @@
             this.addButton.Text = "ADD";
             this.addButton.UseVisualStyleBackColor = true;
             // 
-            // idDataGridViewTextBoxColumn
+            // loginBindingSource2
             // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 40;
+            this.loginBindingSource2.DataMember = "login";
             // 
-            // lastNameDataGridViewTextBoxColumn
+            // desproDataSet
             // 
-            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lastNameDataGridViewTextBoxColumn.Width = 83;
+            this.desproDataSet.DataSetName = "DesproDataSet";
+            this.desproDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // givenNameDataGridViewTextBoxColumn
+            // loginBindingSource3
             // 
-            this.givenNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.givenNameDataGridViewTextBoxColumn.DataPropertyName = "givenName";
-            this.givenNameDataGridViewTextBoxColumn.HeaderText = "First Name";
-            this.givenNameDataGridViewTextBoxColumn.Name = "givenNameDataGridViewTextBoxColumn";
-            this.givenNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.givenNameDataGridViewTextBoxColumn.Width = 82;
+            this.loginBindingSource3.DataMember = "login";
+            this.loginBindingSource3.DataSource = this.desproDataSet;
             // 
-            // middleNameDataGridViewTextBoxColumn
+            // loginTableAdapter
             // 
-            this.middleNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "middleName";
-            this.middleNameDataGridViewTextBoxColumn.HeaderText = "Middle Name";
-            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
-            this.middleNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.middleNameDataGridViewTextBoxColumn.Width = 94;
+            this.loginTableAdapter.ClearBeforeFill = true;
             // 
-            // studentNumberDataGridViewTextBoxColumn
+            // tableAdapterManager
             // 
-            this.studentNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.studentNumberDataGridViewTextBoxColumn.DataPropertyName = "studentNumber";
-            this.studentNumberDataGridViewTextBoxColumn.HeaderText = "Student Number";
-            this.studentNumberDataGridViewTextBoxColumn.Name = "studentNumberDataGridViewTextBoxColumn";
-            this.studentNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tableAdapterManager.adminTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.deviceAithorizationTableAdapter = null;
+            this.tableAdapterManager.loginTableAdapter = this.loginTableAdapter;
+            this.tableAdapterManager.serialKeysTableAdapter = null;
+            this.tableAdapterManager.studentsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Despro.DesproDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // courseDataGridViewTextBoxColumn
+            // loginDataGridView
             // 
-            this.courseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.courseDataGridViewTextBoxColumn.DataPropertyName = "course";
-            this.courseDataGridViewTextBoxColumn.HeaderText = "Course";
-            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
-            this.courseDataGridViewTextBoxColumn.ReadOnly = true;
-            this.courseDataGridViewTextBoxColumn.Width = 65;
+            this.loginDataGridView.AutoGenerateColumns = false;
+            this.loginDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.loginDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26});
+            this.loginDataGridView.DataSource = this.loginBindingSource3;
+            this.loginDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.loginDataGridView.Name = "loginDataGridView";
+            this.loginDataGridView.Size = new System.Drawing.Size(618, 360);
+            this.loginDataGridView.TabIndex = 0;
             // 
-            // collegeDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn14
             // 
-            this.collegeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.collegeDataGridViewTextBoxColumn.DataPropertyName = "college";
-            this.collegeDataGridViewTextBoxColumn.HeaderText = "College";
-            this.collegeDataGridViewTextBoxColumn.Name = "collegeDataGridViewTextBoxColumn";
-            this.collegeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.collegeDataGridViewTextBoxColumn.Width = 67;
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn14.HeaderText = "id";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
-            // dateDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn15
             // 
-            this.dateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date Recorded";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn.Width = 96;
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "givenName";
+            this.dataGridViewTextBoxColumn15.HeaderText = "givenName";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
-            // timeInDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn16
             // 
-            this.timeInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.timeInDataGridViewTextBoxColumn.DataPropertyName = "timeIn";
-            this.timeInDataGridViewTextBoxColumn.HeaderText = "Time In";
-            this.timeInDataGridViewTextBoxColumn.Name = "timeInDataGridViewTextBoxColumn";
-            this.timeInDataGridViewTextBoxColumn.ReadOnly = true;
-            this.timeInDataGridViewTextBoxColumn.Width = 62;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "lastName";
+            this.dataGridViewTextBoxColumn16.HeaderText = "lastName";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
-            // entranceDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn17
             // 
-            this.entranceDataGridViewTextBoxColumn.DataPropertyName = "entrance";
-            this.entranceDataGridViewTextBoxColumn.HeaderText = "Entry Point";
-            this.entranceDataGridViewTextBoxColumn.Name = "entranceDataGridViewTextBoxColumn";
-            this.entranceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "middleName";
+            this.dataGridViewTextBoxColumn17.HeaderText = "middleName";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
-            // timeOutDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn18
             // 
-            this.timeOutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.timeOutDataGridViewTextBoxColumn.DataPropertyName = "timeOut";
-            this.timeOutDataGridViewTextBoxColumn.HeaderText = "Time Out";
-            this.timeOutDataGridViewTextBoxColumn.Name = "timeOutDataGridViewTextBoxColumn";
-            this.timeOutDataGridViewTextBoxColumn.ReadOnly = true;
-            this.timeOutDataGridViewTextBoxColumn.Width = 69;
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "studentNumber";
+            this.dataGridViewTextBoxColumn18.HeaderText = "studentNumber";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             // 
-            // exitDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn19
             // 
-            this.exitDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.exitDataGridViewTextBoxColumn.DataPropertyName = "exit";
-            this.exitDataGridViewTextBoxColumn.HeaderText = "Exit Point";
-            this.exitDataGridViewTextBoxColumn.Name = "exitDataGridViewTextBoxColumn";
-            this.exitDataGridViewTextBoxColumn.ReadOnly = true;
-            this.exitDataGridViewTextBoxColumn.Width = 70;
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "course";
+            this.dataGridViewTextBoxColumn19.HeaderText = "course";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
-            // locationDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn20
             // 
-            this.locationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "Bus Exit Point";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            this.locationDataGridViewTextBoxColumn.ReadOnly = true;
-            this.locationDataGridViewTextBoxColumn.Width = 89;
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "college";
+            this.dataGridViewTextBoxColumn20.HeaderText = "college";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "date";
+            this.dataGridViewTextBoxColumn21.HeaderText = "date";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "timeIn";
+            this.dataGridViewTextBoxColumn22.HeaderText = "timeIn";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "entrance";
+            this.dataGridViewTextBoxColumn23.HeaderText = "entrance";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "timeOut";
+            this.dataGridViewTextBoxColumn24.HeaderText = "timeOut";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "exit";
+            this.dataGridViewTextBoxColumn25.HeaderText = "exit";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "location";
+            this.dataGridViewTextBoxColumn26.HeaderText = "location";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             // 
             // loginDatabase
             // 
@@ -505,19 +465,20 @@
             this.menuPanel.ResumeLayout(false);
             this.bodyPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSet2)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desproDatabaseDataSetAdmin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -535,13 +496,10 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private desproDatabaseDataSetAdmin desproDatabaseDataSetAdmin;
+
         private System.Windows.Forms.BindingSource adminBindingSource;
-        private desproDatabaseDataSetAdminTableAdapters.adminTableAdapter adminTableAdapter;
-        private desproDatabaseDataSet2 desproDatabaseDataSet2;
+
         private System.Windows.Forms.BindingSource loginBindingSource;
-        private desproDatabaseDataSet2TableAdapters.loginTableAdapter loginTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource loginBindingSource1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -553,18 +511,37 @@
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn givenNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn courseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn collegeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeInDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn entranceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeOutDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exitDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource loginBindingSource2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private DesproDataSet desproDataSet;
+        private System.Windows.Forms.BindingSource loginBindingSource3;
+        private DesproDataSetTableAdapters.loginTableAdapter loginTableAdapter;
+        private DesproDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView loginDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
     }
 }

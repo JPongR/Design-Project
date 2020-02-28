@@ -78,13 +78,15 @@ namespace Despro
             Hide();
             accountsDatabase.Show();
         }
+
+
+
         #endregion
+
         private void loginDatabase_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'desproDatabaseDataSet2.login' table. You can move, or remove it, as needed.
-            this.loginTableAdapter.Fill(this.desproDatabaseDataSet2.login);
-            // TODO: This line of code loads data into the 'desproDatabaseDataSetAdmin.admin' table. You can move, or remove it, as needed.
-            this.adminTableAdapter.Fill(this.desproDatabaseDataSetAdmin.admin);
+            // TODO: This line of code loads data into the 'desproDataSet.login' table. You can move, or remove it, as needed.
+            this.loginTableAdapter.Fill(this.desproDataSet.login);
 
         }
     }

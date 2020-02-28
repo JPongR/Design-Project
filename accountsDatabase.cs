@@ -51,13 +51,6 @@ namespace Despro
 
         }
 
-        
-        private void accountsDatabase_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'desproDatabaseDataSetAdmin.admin' table. You can move, or remove it, as needed.
-            this.adminTableAdapter.Fill(this.desproDatabaseDataSetAdmin.admin);
-
-        }
         //menu clicks
         #region
         private void studentButton_Click(object sender, EventArgs e)
@@ -87,8 +80,15 @@ namespace Despro
             Hide();
             accountsDatabase.Show();
         }
+
+
         #endregion
 
-     
+        private void accountsDatabase_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'desproDataSet.admin' table. You can move, or remove it, as needed.
+            this.adminTableAdapter.Fill(this.desproDataSet.admin);
+
+        }
     }
 }

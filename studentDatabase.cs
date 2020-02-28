@@ -81,12 +81,21 @@ namespace Despro
             Hide();
             accountsDatabase.Show();
         }
+
         #endregion
+
+        private void studentsBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.studentsBindingSource1.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.desproDataSet);
+
+        }
 
         private void studentDatabase_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'desproDatabaseDataSet1.students' table. You can move, or remove it, as needed.
-            this.studentsTableAdapter.Fill(this.desproDatabaseDataSet1.students);
+            // TODO: This line of code loads data into the 'desproDataSet.students' table. You can move, or remove it, as needed.
+            this.studentsTableAdapter.Fill(this.desproDataSet.students);
 
         }
     }

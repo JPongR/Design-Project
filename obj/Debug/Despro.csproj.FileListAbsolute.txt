@@ -13,8 +13,6 @@ C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.Properties.Re
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.csproj.GenerateResource.cache
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.exe
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.pdb
-C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\desproDatabase.mdf
-C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\desproDatabase_log.ldf
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.exe.config
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.exe
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.pdb
@@ -23,3 +21,5 @@ C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.accountsDatab
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.deviceDatabase.resources
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.loginDatabase.resources
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.studentDatabase.resources
+C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.mdf
+C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro_log.ldf

@@ -33,5 +33,27 @@ namespace Despro.Properties {
                 return ((string)(this["desproDatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\bin\\Debug\\des" +
+            "proDatabase.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string desproDatabaseConnectionString1 {
+            get {
+                return ((string)(this["desproDatabaseConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Despro.mdf;In" +
+            "tegrated Security=True;Connect Timeout=30")]
+        public string DesproConnectionString {
+            get {
+                return ((string)(this["DesproConnectionString"]));
+            }
+        }
     }
 }

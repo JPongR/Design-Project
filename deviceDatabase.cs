@@ -80,12 +80,14 @@ namespace Despro
             Hide();
             accountsDatabase.Show();
         }
+
+
         #endregion
 
         private void deviceDatabase_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'desproDatabaseDataSetDevices.deviceAithorization' table. You can move, or remove it, as needed.
-            this.deviceAithorizationTableAdapter.Fill(this.desproDatabaseDataSetDevices.deviceAithorization);
+            // TODO: This line of code loads data into the 'desproDataSet.deviceAithorization' table. You can move, or remove it, as needed.
+            this.deviceAithorizationTableAdapter.Fill(this.desproDataSet.deviceAithorization);
 
         }
     }
