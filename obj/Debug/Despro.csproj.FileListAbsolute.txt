@@ -23,3 +23,4 @@ C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.loginDatabase
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.studentDatabase.resources
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.mdf
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro_log.ldf
+C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.accessDevice.resources

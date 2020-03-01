@@ -90,5 +90,26 @@ namespace Despro
             this.deviceAithorizationTableAdapter.Fill(this.desproDataSet.deviceAithorization);
 
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            accessDevice accessDevice = new accessDevice(userlocal, typelocal, "add");
+            Hide();
+            accessDevice.Show();
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            accessDevice accessDevice = new accessDevice(userlocal, typelocal,"edit");
+            Hide();
+            accessDevice.Show();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            accessDevice accessDevice = new accessDevice(userlocal, typelocal, "delete");
+            Hide();
+            accessDevice.Show();
+        }
     }
 }

@@ -50,6 +50,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +79,12 @@
     <Compile Include="accountsDatabase.Designer.cs">
       <DependentUpon>accountsDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="accessDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accessDevice.Designer.cs">
+      <DependentUpon>accessDevice.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +111,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="accessDevice.resx">
+      <DependentUpon>accessDevice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="accountsDatabase.resx">
       <DependentUpon>accountsDatabase.cs</DependentUpon>
     </EmbeddedResource>
