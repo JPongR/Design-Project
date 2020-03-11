@@ -66,7 +66,7 @@ namespace Despro
 
         private void button1_Click(object sender, EventArgs e) //backbutton
         {
-            deviceDatabase deviceDatabase = new deviceDatabase(userlocal, typelocal);
+            deviceDatabase deviceDatabase = new deviceDatabase(userlocal, typelocal, "devices");
             Hide();
             deviceDatabase.Show();
         }
