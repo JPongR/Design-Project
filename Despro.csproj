@@ -85,6 +85,24 @@
     <Compile Include="accessDevice.Designer.cs">
       <DependentUpon>accessDevice.cs</DependentUpon>
     </Compile>
+    <Compile Include="accessStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accessStudents.Designer.cs">
+      <DependentUpon>accessStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accessLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accessLogin.Designer.cs">
+      <DependentUpon>accessLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accessAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accessAccounts.Designer.cs">
+      <DependentUpon>accessAccounts.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +132,20 @@
     <EmbeddedResource Include="accessDevice.resx">
       <DependentUpon>accessDevice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="accessStudents.resx">
+      <DependentUpon>accessStudents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="accountsDatabase.resx">
       <DependentUpon>accountsDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="deviceDatabase.resx">
       <DependentUpon>deviceDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="accessLogin.resx">
+      <DependentUpon>accessLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="accessAccounts.resx">
+      <DependentUpon>accessAccounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

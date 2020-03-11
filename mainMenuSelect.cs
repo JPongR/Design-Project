@@ -14,6 +14,7 @@ namespace Despro
     {
         public string userlocal = "";
         public string typelocal = "";
+
         public mainMenuSelect(string user, string type)
         {
             InitializeComponent();
@@ -49,30 +50,30 @@ namespace Despro
 
         private void studentButton_Click(object sender, EventArgs e)
         {
-            studentDatabase studentDatabase = new studentDatabase(userlocal,typelocal);
+            deviceDatabase deviceDatabase = new deviceDatabase(userlocal, typelocal,"students");
             Hide();
-            studentDatabase.Show();
+            deviceDatabase.Show();
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            loginDatabase loginDatabase = new loginDatabase(userlocal, typelocal);
+            deviceDatabase deviceDatabase = new deviceDatabase(userlocal, typelocal,"logins");
             Hide();
-            loginDatabase.Show();
+            deviceDatabase.Show();
         }
 
         private void deviceButton_Click(object sender, EventArgs e)
         {
-            deviceDatabase deviceDatabase = new deviceDatabase(userlocal, typelocal);
+            deviceDatabase deviceDatabase = new deviceDatabase(userlocal, typelocal,"devices");
             Hide();
             deviceDatabase.Show();
         }
 
         private void accountButton_Click(object sender, EventArgs e)
         {
-            accountsDatabase accountsDatabase = new accountsDatabase(userlocal, typelocal);
+            deviceDatabase deviceDatabase = new deviceDatabase(userlocal, typelocal,"accounts");
             Hide();
-            accountsDatabase.Show();
+            deviceDatabase.Show();
         }
     }
 }
