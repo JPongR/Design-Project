@@ -31,13 +31,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.lastNameBox = new System.Windows.Forms.TextBox();
+            this.usernameBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.studentNumberBox = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
             this.idLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.collegeBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.clearButton = new System.Windows.Forms.Button();
@@ -47,6 +46,7 @@
             this.backButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.saveButton = new System.Windows.Forms.Button();
+            this.typeBox = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,14 +66,14 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.typeBox);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.lastNameBox);
+            this.panel5.Controls.Add(this.usernameBox);
             this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.studentNumberBox);
+            this.panel5.Controls.Add(this.passwordBox);
             this.panel5.Controls.Add(this.idLabel);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.collegeBox);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 66);
             this.panel5.Name = "panel5";
@@ -89,12 +89,12 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "ID Number:";
             // 
-            // lastNameBox
+            // usernameBox
             // 
-            this.lastNameBox.Location = new System.Drawing.Point(15, 56);
-            this.lastNameBox.Name = "lastNameBox";
-            this.lastNameBox.Size = new System.Drawing.Size(179, 20);
-            this.lastNameBox.TabIndex = 2;
+            this.usernameBox.Location = new System.Drawing.Point(15, 56);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.Size = new System.Drawing.Size(179, 20);
+            this.usernameBox.TabIndex = 2;
             // 
             // label10
             // 
@@ -105,13 +105,13 @@
             this.label10.TabIndex = 29;
             this.label10.Text = "User Type";
             // 
-            // studentNumberBox
+            // passwordBox
             // 
-            this.studentNumberBox.Location = new System.Drawing.Point(15, 95);
-            this.studentNumberBox.Name = "studentNumberBox";
-            this.studentNumberBox.PasswordChar = '*';
-            this.studentNumberBox.Size = new System.Drawing.Size(179, 20);
-            this.studentNumberBox.TabIndex = 4;
+            this.passwordBox.Location = new System.Drawing.Point(15, 95);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.PasswordChar = '*';
+            this.passwordBox.Size = new System.Drawing.Size(179, 20);
+            this.passwordBox.TabIndex = 4;
             // 
             // idLabel
             // 
@@ -139,13 +139,6 @@
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Password";
-            // 
-            // collegeBox
-            // 
-            this.collegeBox.Location = new System.Drawing.Point(15, 143);
-            this.collegeBox.Name = "collegeBox";
-            this.collegeBox.Size = new System.Drawing.Size(179, 20);
-            this.collegeBox.TabIndex = 10;
             // 
             // panel1
             // 
@@ -179,6 +172,7 @@
             this.clearButton.TabIndex = 3;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // searchButton
             // 
@@ -190,6 +184,7 @@
             this.searchButton.TabIndex = 2;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // label1
             // 
@@ -217,6 +212,7 @@
             this.backButton.TabIndex = 0;
             this.backButton.Text = "BACK";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // panel2
             // 
@@ -236,6 +232,20 @@
             this.saveButton.TabIndex = 0;
             this.saveButton.Text = "SAVE";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // typeBox
+            // 
+            this.typeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.typeBox.FormattingEnabled = true;
+            this.typeBox.Items.AddRange(new object[] {
+            "ICTO",
+            "PROPERTIES",
+            "USO"});
+            this.typeBox.Location = new System.Drawing.Point(15, 143);
+            this.typeBox.Name = "typeBox";
+            this.typeBox.Size = new System.Drawing.Size(179, 21);
+            this.typeBox.TabIndex = 30;
             // 
             // accessAccounts
             // 
@@ -263,13 +273,12 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox lastNameBox;
+        private System.Windows.Forms.TextBox usernameBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox studentNumberBox;
+        private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox collegeBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button clearButton;
@@ -279,5 +288,6 @@
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.ComboBox typeBox;
     }
 }

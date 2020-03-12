@@ -54,19 +54,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.gpsBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dateBox = new System.Windows.Forms.TextBox();
+            this.exitPointBox = new System.Windows.Forms.TextBox();
+            this.entrancePointBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.middleNameBox = new System.Windows.Forms.TextBox();
             this.lastNameBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.exitBox = new System.Windows.Forms.TextBox();
             this.entryBox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -149,6 +149,7 @@
             this.clearButton.TabIndex = 3;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // searchButton
             // 
@@ -160,6 +161,7 @@
             this.searchButton.TabIndex = 2;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // label1
             // 
@@ -187,6 +189,7 @@
             this.backButton.TabIndex = 0;
             this.backButton.Text = "BACK";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // saveButton
             // 
@@ -197,6 +200,7 @@
             this.saveButton.TabIndex = 0;
             this.saveButton.Text = "SAVE";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // label9
             // 
@@ -301,12 +305,12 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.gpsBox);
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.dateBox);
+            this.panel5.Controls.Add(this.exitPointBox);
+            this.panel5.Controls.Add(this.entrancePointBox);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.label11);
@@ -334,6 +338,70 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(576, 367);
             this.panel5.TabIndex = 31;
+            // 
+            // gpsBox
+            // 
+            this.gpsBox.Location = new System.Drawing.Point(385, 264);
+            this.gpsBox.Name = "gpsBox";
+            this.gpsBox.Size = new System.Drawing.Size(181, 20);
+            this.gpsBox.TabIndex = 44;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(382, 248);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 13);
+            this.label15.TabIndex = 43;
+            this.label15.Text = "Bus Exit Location";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(382, 209);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(30, 13);
+            this.label14.TabIndex = 42;
+            this.label14.Text = "Date";
+            // 
+            // dateBox
+            // 
+            this.dateBox.Location = new System.Drawing.Point(385, 225);
+            this.dateBox.Name = "dateBox";
+            this.dateBox.Size = new System.Drawing.Size(181, 20);
+            this.dateBox.TabIndex = 41;
+            // 
+            // exitPointBox
+            // 
+            this.exitPointBox.Location = new System.Drawing.Point(200, 264);
+            this.exitPointBox.Name = "exitPointBox";
+            this.exitPointBox.Size = new System.Drawing.Size(179, 20);
+            this.exitPointBox.TabIndex = 40;
+            // 
+            // entrancePointBox
+            // 
+            this.entrancePointBox.Location = new System.Drawing.Point(15, 264);
+            this.entrancePointBox.Name = "entrancePointBox";
+            this.entrancePointBox.Size = new System.Drawing.Size(179, 20);
+            this.entrancePointBox.TabIndex = 39;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(200, 248);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 13);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Exit Point";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(15, 248);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 13);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "Entrance Point";
             // 
             // middleNameBox
             // 
@@ -372,70 +440,6 @@
             this.entryBox.Size = new System.Drawing.Size(179, 20);
             this.entryBox.TabIndex = 12;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 248);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 13);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Entrance Point";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(200, 248);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 13);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "Exit Point";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 264);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
-            this.textBox1.TabIndex = 39;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(200, 264);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 20);
-            this.textBox2.TabIndex = 40;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(385, 225);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 20);
-            this.textBox3.TabIndex = 41;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(382, 209);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(30, 13);
-            this.label14.TabIndex = 42;
-            this.label14.Text = "Date";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(382, 248);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 13);
-            this.label15.TabIndex = 43;
-            this.label15.Text = "Bus Exit Location";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(385, 264);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 20);
-            this.textBox4.TabIndex = 44;
-            // 
             // accessLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,6 +447,7 @@
             this.ClientSize = new System.Drawing.Size(576, 433);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "accessLogin";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -489,12 +494,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox exitBox;
         private System.Windows.Forms.TextBox entryBox;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox gpsBox;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox dateBox;
+        private System.Windows.Forms.TextBox exitPointBox;
+        private System.Windows.Forms.TextBox entrancePointBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
     }

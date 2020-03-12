@@ -13,8 +13,7 @@ namespace Despro
 {
     public partial class deviceDatabase : Form
     {
-        public string userlocal = "";
-        public string typelocal = "";
+        public string userlocal = "",typelocal = "", menulocal = "";
         public SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Despro.mdf;Integrated Security=True"); // making connection   
         public deviceDatabase(string user, string type, string menuSelect)
         {
@@ -27,7 +26,7 @@ namespace Despro
             accountButton.Enabled = false;
             userlocal = user;
             typelocal = type;
-
+            menulocal = menuSelect;
             if (type == "icto")
             {
                 studentButton.Enabled = true;
@@ -79,6 +78,7 @@ namespace Despro
         #region
         public void callDevices ()
         {
+           
             DataTable dt = new DataTable();
             string sqlstring = "SELECT * FROM dbo.devices";
             SqlDataAdapter sda = new SqlDataAdapter(sqlstring, conn);
@@ -180,23 +180,84 @@ namespace Despro
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            accessDevice accessDevice = new accessDevice(userlocal, typelocal, "add");
-            Hide();
-            accessDevice.Show();
+            if (menulocal == "devices")
+            {
+                accessDevice accessDevice = new accessDevice(userlocal, typelocal, "add");
+                Hide();
+                accessDevice.Show();
+            }else if (menulocal == "students")
+            {
+                accessStudents accessStudents = new accessStudents(userlocal, typelocal, "add");
+                Hide();
+                accessStudents.Show();
+
+            }
+            else if (menulocal == "logins")
+            {
+                accessLogin accessLogin = new accessLogin(userlocal, typelocal, "add");
+                Hide();
+                accessLogin.Show();
+            }
+            else
+            {
+                accessAccounts accessAccounts = new accessAccounts(userlocal, typelocal, "add");
+                Hide();
+                accessAccounts.Show();
+            }
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            accessDevice accessDevice = new accessDevice(userlocal, typelocal,"edit");
+            if (menulocal == "devices")
+            {
+                accessDevice accessDevice = new accessDevice(userlocal, typelocal,"edit");
             Hide();
             accessDevice.Show();
+            }else if (menulocal == "students")
+            {
+                accessStudents accessStudents = new accessStudents(userlocal, typelocal, "edit");
+                Hide();
+                accessStudents.Show();
+            }
+            else if (menulocal == "logins")
+            {
+                accessLogin accessLogin = new accessLogin(userlocal, typelocal, "edit");
+                Hide();
+                accessLogin.Show();
+            }
+            else
+            {
+                accessAccounts accessAccounts = new accessAccounts(userlocal, typelocal, "edit");
+                Hide();
+                accessAccounts.Show();
+            }
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            accessDevice accessDevice = new accessDevice(userlocal, typelocal, "delete");
+            if (menulocal == "devices")
+            {
+                accessDevice accessDevice = new accessDevice(userlocal, typelocal, "delete");
             Hide();
             accessDevice.Show();
+            }else if (menulocal == "students")
+            {
+                accessStudents accessStudents = new accessStudents(userlocal, typelocal, "delete");
+                Hide();
+                accessStudents.Show();
+            }
+            else if (menulocal == "logins")
+            {
+                accessLogin accessLogin = new accessLogin(userlocal, typelocal, "delete");
+                Hide();
+                accessLogin.Show();
+            }
+            else
+            {
+                accessAccounts accessAccounts = new accessAccounts(userlocal, typelocal, "delete");
+                Hide();
+                accessAccounts.Show();
+            }
         }
     }
 }

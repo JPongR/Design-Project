@@ -53,12 +53,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.courseBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.courseBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -196,6 +196,7 @@
             this.saveButton.TabIndex = 0;
             this.saveButton.Text = "SAVE";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // backButton
             // 
@@ -206,6 +207,7 @@
             this.backButton.TabIndex = 0;
             this.backButton.Text = "BACK";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // clearButton
             // 
@@ -217,6 +219,7 @@
             this.clearButton.TabIndex = 3;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // searchButton
             // 
@@ -228,6 +231,7 @@
             this.searchButton.TabIndex = 2;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // label1
             // 
@@ -306,39 +310,14 @@
             this.panel5.Size = new System.Drawing.Size(578, 391);
             this.panel5.TabIndex = 31;
             // 
-            // label6
+            // label11
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(197, 40);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "First Name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(382, 40);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 13);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "Middle Name";
-            // 
-            // courseBox
-            // 
-            this.courseBox.Location = new System.Drawing.Point(200, 143);
-            this.courseBox.Name = "courseBox";
-            this.courseBox.Size = new System.Drawing.Size(179, 20);
-            this.courseBox.TabIndex = 33;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(200, 127);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Course";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(200, 209);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Last Exit";
             // 
             // label9
             // 
@@ -349,14 +328,39 @@
             this.label9.TabIndex = 35;
             this.label9.Text = "Last Entry";
             // 
-            // label11
+            // label8
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(200, 209);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 13);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Last Exit";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(200, 127);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 13);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Course";
+            // 
+            // courseBox
+            // 
+            this.courseBox.Location = new System.Drawing.Point(200, 143);
+            this.courseBox.Name = "courseBox";
+            this.courseBox.Size = new System.Drawing.Size(179, 20);
+            this.courseBox.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(382, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 13);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "Middle Name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(197, 40);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "First Name";
             // 
             // accessStudents
             // 
