@@ -18,8 +18,6 @@ C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.exe
 C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.pdb
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.mainMenuSelect.resources
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.deviceDatabase.resources
-C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro.mdf
-C:\Users\jp19r\source\repos\Despro\Design Project\bin\Debug\Despro_log.ldf
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.accessDevice.resources
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.accessStudents.resources
 C:\Users\jp19r\source\repos\Despro\Design Project\obj\Debug\Despro.accessLogin.resources

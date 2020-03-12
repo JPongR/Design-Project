@@ -14,7 +14,7 @@ namespace Despro
     public partial class deviceDatabase : Form
     {
         public string userlocal = "",typelocal = "", menulocal = "";
-        public SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Despro.mdf;Integrated Security=True"); // making connection   
+        public SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Despro.mdf;Integrated Security=True;"); // making connection   
         public deviceDatabase(string user, string type, string menuSelect)
         {
             //initialization
@@ -156,21 +156,25 @@ namespace Despro
         {
 
             callStudents();
+            menulocal = "students";
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
             callLogins();
+            menulocal = "logins";
         }
 
         private void deviceButton_Click(object sender, EventArgs e)
         {
             callDevices();
+            menulocal = "devices";
         }
 
         private void accountButton_Click(object sender, EventArgs e)
         {
             callAdmins();
+            menulocal = "accounts";
         }
 
 
