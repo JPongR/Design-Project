@@ -40,8 +40,6 @@
             this.bodyPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.deviceGrid = new System.Windows.Forms.DataGridView();
-            this.deviceAithorizationBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.desproDataSet = new Despro.DesproDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -53,6 +51,8 @@
             this.editButton = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.addButton = new System.Windows.Forms.Button();
+            this.deviceAithorizationBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.desproDataSet = new Despro.DesproDataSet();
             this.deviceAithorizationTableAdapter = new Despro.DesproDataSetTableAdapters.deviceAithorizationTableAdapter();
             this.tableAdapterManager = new Despro.DesproDataSetTableAdapters.TableAdapterManager();
             this.deviceAithorizationBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -63,8 +63,6 @@
             this.bodyPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deviceGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deviceAithorizationBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desproDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -72,6 +70,8 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deviceAithorizationBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceAithorizationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceAithorizationBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -203,16 +203,6 @@
             this.deviceGrid.Size = new System.Drawing.Size(618, 359);
             this.deviceGrid.TabIndex = 0;
             // 
-            // deviceAithorizationBindingSource2
-            // 
-            this.deviceAithorizationBindingSource2.DataMember = "deviceAithorization";
-            this.deviceAithorizationBindingSource2.DataSource = this.desproDataSet;
-            // 
-            // desproDataSet
-            // 
-            this.desproDataSet.DataSetName = "DesproDataSet";
-            this.desproDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
@@ -261,6 +251,7 @@
             this.exportButton.TabIndex = 0;
             this.exportButton.Text = "EXPORT";
             this.exportButton.UseVisualStyleBackColor = true;
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
             // 
             // panel6
             // 
@@ -322,6 +313,16 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
+            // deviceAithorizationBindingSource2
+            // 
+            this.deviceAithorizationBindingSource2.DataMember = "deviceAithorization";
+            this.deviceAithorizationBindingSource2.DataSource = this.desproDataSet;
+            // 
+            // desproDataSet
+            // 
+            this.desproDataSet.DataSetName = "DesproDataSet";
+            this.desproDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // deviceAithorizationTableAdapter
             // 
             this.deviceAithorizationTableAdapter.ClearBeforeFill = true;
@@ -353,8 +354,6 @@
             this.bodyPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.deviceGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deviceAithorizationBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desproDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -362,6 +361,8 @@
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.deviceAithorizationBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desproDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceAithorizationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceAithorizationBindingSource1)).EndInit();
             this.ResumeLayout(false);

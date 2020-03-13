@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace Despro
     public partial class deviceDatabase : Form
     {
         public string userlocal = "",typelocal = "", menulocal = "";
+        public DataTable dtlocal = new DataTable();
+
         public SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Despro.mdf;Integrated Security=True;"); // making connection   
         public deviceDatabase(string user, string type, string menuSelect)
         {
@@ -78,7 +81,7 @@ namespace Despro
         #region
         public void callDevices ()
         {
-           
+            dtlocal.Reset();
             DataTable dt = new DataTable();
             string sqlstring = "SELECT * FROM dbo.devices";
             SqlDataAdapter sda = new SqlDataAdapter(sqlstring, conn);
@@ -94,9 +97,11 @@ namespace Despro
             dt.Columns[7].ColumnName = "Allowed User 4";
             dt.Columns[8].ColumnName = "Allowed User 5";
             deviceGrid.DataSource = dt;
+            dtlocal.Merge(dt);
         }
         public void callLogins()
         {
+            dtlocal.Reset();
             DataTable dt = new DataTable();
             string sqlstring = "SELECT * FROM dbo.login";
             SqlDataAdapter sda = new SqlDataAdapter(sqlstring, conn);
@@ -116,9 +121,12 @@ namespace Despro
             dt.Columns[11].ColumnName = "Exit Point";
             dt.Columns[12].ColumnName = "Bus Location Exit Point";
             deviceGrid.DataSource = dt;
+            dtlocal.Merge(dt);
+
         }
         public void callAdmins()
         {
+            dtlocal.Reset();
             DataTable dt = new DataTable();
             string sqlstring = "SELECT * FROM dbo.admin";
             SqlDataAdapter sda = new SqlDataAdapter(sqlstring, conn);
@@ -129,9 +137,12 @@ namespace Despro
             dt.Columns[2].ColumnName = "Password";
             dt.Columns[3].ColumnName = "User Type";
             deviceGrid.DataSource = dt;
+            dtlocal.Merge(dt);
+
         }
         public void callStudents()
         {
+            dtlocal.Reset();
             DataTable dt = new DataTable();
             string sqlstring = "SELECT * FROM dbo.students";
             SqlDataAdapter sda = new SqlDataAdapter(sqlstring, conn);
@@ -148,6 +159,8 @@ namespace Despro
             dt.Columns[8].ColumnName = "Last Entry Point";
             dt.Columns[9].ColumnName = "Last Exit Point";
             deviceGrid.DataSource = dt;
+            dtlocal.Merge(dt);
+
         }
         #endregion
         //menu clicks
@@ -210,6 +223,21 @@ namespace Despro
             }
         }
 
+        private void exportButton_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog savefile = new SaveFileDialog();
+            savefile.Filter = "CSV File|*.csv";
+            savefile.ShowDialog();
+            try
+            {
+                dtlocal.ToCSV(savefile.FileName);
+            }
+            catch
+            {
+
+            }
+        }
+       
         private void editButton_Click(object sender, EventArgs e)
         {
             if (menulocal == "devices")
@@ -262,6 +290,48 @@ namespace Despro
                 Hide();
                 accessAccounts.Show();
             }
+        }
+    }
+    public static class CSVUtlity
+    {
+        public static void ToCSV(this DataTable dtDataTable, string strFilePath)
+        {
+            StreamWriter sw = new StreamWriter(strFilePath, false, Encoding.UTF8);
+            //headers  
+            for (int i = 0; i < dtDataTable.Columns.Count; i++)
+            {
+                sw.Write(dtDataTable.Columns[i]);
+                if (i < dtDataTable.Columns.Count - 1)
+                {
+                    sw.Write(",");
+                }
+            }
+            sw.Write(sw.NewLine);
+            foreach (DataRow dr in dtDataTable.Rows)
+            {
+                for (int i = 0; i < dtDataTable.Columns.Count; i++)
+                {
+                    if (!Convert.IsDBNull(dr[i]))
+                    {
+                        string value = dr[i].ToString();
+                        if (value.Contains(','))
+                        {
+                            value = String.Format("\"{0}\"", value);
+                            sw.Write(value);
+                        }
+                        else
+                        {
+                            sw.Write(dr[i].ToString());
+                        }
+                    }
+                    if (i < dtDataTable.Columns.Count - 1)
+                    {
+                        sw.Write(",");
+                    }
+                }
+                sw.Write(sw.NewLine);
+            }
+            sw.Close();
         }
     }
 }
